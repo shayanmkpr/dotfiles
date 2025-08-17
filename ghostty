@@ -1,0 +1,7 @@
+font-family = Monaco
+
+background = 000014
+theme = GruvboxDarkHard
+macos-titlebar-style = hidden
+background-opacity = 0.8
+background-blur = true
