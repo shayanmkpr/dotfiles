@@ -39,6 +39,7 @@ DOTFILES=$HOME/dotfiles
 
 # Ghostty
 [ ! -L "$HOME/Library/Application Support/com.mitchellh.ghostty/config" ] && ln -sfn $DOTFILES/ghostty "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+
 # Tmux
 [ ! -L "$HOME/.tmux.conf" ] && ln -sfn $DOTFILES/tmux.conf $HOME/.tmux.conf
 

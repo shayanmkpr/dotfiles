@@ -182,3 +182,7 @@ run = "move-node-to-workspace V"
 [[on-window-detected]]
 if.app-id = 'app.hiddify.com'
 run = "move-node-to-workspace X"
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = "move-node-to-workspace S"
