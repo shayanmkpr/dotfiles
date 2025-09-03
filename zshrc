@@ -8,7 +8,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/vs-code/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Users/shayan/.lmstudio/bin"
-
+export PATH="$PATH:/Users/shayan/go/bin"
 # Conda
 _CONDA_ROOT="/Users/shayan/miniconda3"
 . "$_CONDA_ROOT/etc/profile.d/conda.sh"
