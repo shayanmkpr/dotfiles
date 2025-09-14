@@ -11,10 +11,23 @@ return {
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local capabilities = cmp_nvim_lsp.default_capabilities()
+    
+    -- Configure diagnostic display settings
+    vim.diagnostic.config({
+      virtual_text = true,  -- Show inline error messages
+      signs = true,         -- Show gutter signs (even if icons are empty, this enables the column)
+      underline = true,     -- Underline errors
+      update_in_insert = false,  -- Don't update while typing
+      severity_sort = true,
+    })
+    
+    -- Set signs (you had empty icons; if you want visible ones, update the icons here, e.g., "" for Error)
     local signs = { Error = "", Warn = "", Hint = "", Info = "" }
     for type, icon in pairs(signs) do
       vim.fn.sign_define("DiagnosticSign" .. type, { text = icon, texthl = "DiagnosticSign" .. type })
     end
+    
+    -- Autocmd for LspAttach (unchanged)
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
@@ -39,11 +52,31 @@ return {
         end
       end,
     })
+    
+    -- Add auto-format and organize imports on save for Go files
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = "*.go",
+      callback = function()
+        local params = vim.lsp.util.make_range_params()
+        params.context = { only = { "source.organizeImports" } }
+        local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
+        for cid, res in pairs(result or {}) do
+          for _, r in pairs(res.result or {}) do
+            if r.edit then
+              local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+              vim.lsp.util.apply_workspace_edit(r.edit, enc)
+            end
+          end
+        end
+        vim.lsp.buf.format({ async = false })
+      end,
+    })
+    
     require("mason").setup()
     local mason_lspconfig_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
     if mason_lspconfig_ok then
       mason_lspconfig.setup({
-        ensure_installed = { "lua_ls" }, -- Add other servers you want here
+        ensure_installed = { "lua_ls", "gopls" },  -- Added gopls for Mason management (optional but recommended)
       })
       -- Try to use setup_handlers if available
       if mason_lspconfig.setup_handlers then
@@ -64,6 +97,23 @@ return {
               },
             })
           end,
+          ["gopls"] = function()
+            lspconfig.gopls.setup({
+              capabilities = capabilities,
+              cmd = { "gopls" },
+              settings = {
+                gopls = {
+                  analyses = {
+                    unusedparams = true,
+                    shadow = true,  -- Added for better diagnostics
+                  },
+                  staticcheck = true,
+                  gofumpt = true,  -- Optional: stricter formatting
+                  semanticTokens = true,  -- For improved highlighting
+                },
+              },
+            })
+          end,
         })
       else
         -- Fallback to manual setup
@@ -76,6 +126,21 @@ return {
             },
           },
         })
+        lspconfig.gopls.setup({
+          capabilities = capabilities,
+          cmd = { "gopls" },
+          settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+                shadow = true,
+              },
+              staticcheck = true,
+              gofumpt = true,
+              semanticTokens = true,
+            },
+          },
+        })
       end
     else
       -- Mason-lspconfig not available, setup manually
@@ -85,6 +150,21 @@ return {
           Lua = {
             diagnostics = { globals = { "vim" } },
             completion = { callSnippet = "Replace" },
+          },
+        },
+      })
+      lspconfig.gopls.setup({
+        capabilities = capabilities,
+        cmd = { "gopls" },
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+              shadow = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+            semanticTokens = true,
           },
         },
       })
