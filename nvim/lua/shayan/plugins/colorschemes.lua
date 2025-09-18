@@ -1,22 +1,22 @@
 return {
 -- ===============================================================
 
-    "folke/tokyonight.nvim",
-    priority = 1000,
-    config = function()
-        require("tokyonight").setup({
-            style = "night",
-            -- make comments italic
-            styles = {
-                comments = { italic = true },
-                keywords = { italic = true },
-                functions = { italic = true },
-            },
-            transparent = true
-        })
-
-        vim.cmd("colorscheme tokyonight")
-    end,
+    -- "folke/tokyonight.nvim",
+    -- priority = 1000,
+    -- config = function()
+    --     require("tokyonight").setup({
+    --         style = "night",
+    --         -- make comments italic
+    --         styles = {
+    --             comments = { italic = true },
+    --             keywords = { italic = true },
+    --             functions = { italic = true },
+    --         },
+    --         transparent = true
+    --     })
+    --
+    --     vim.cmd("colorscheme tokyonight")
+    -- end,
 
 -- ===============================================================
 
@@ -66,16 +66,16 @@ return {
 
 -- ===============================================================
 
-    -- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    -- name = "gruvbox",
-    -- config = function()
-    --     require("gruvbox").setup({
-    --         styles = {
-    --             transparency = true
-    --         }
-    --     })
-    --     vim.cmd("colorscheme gruvbox-hard")
-    -- end
+    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    name = "gruvbox",
+    config = function()
+        require("gruvbox").setup({
+            styles = {
+                transparency = true
+            }
+        })
+        vim.cmd("colorscheme gruvbox-hard")
+    end
 
 -- ===============================================================
 

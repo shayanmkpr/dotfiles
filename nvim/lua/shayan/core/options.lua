@@ -87,23 +87,4 @@ keymap("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
 keymap("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
--- keymap("i", "{<CR>", "{<CR>}<Esc>O", { noremap = true, desc = "Auto newline in {}" })
--- keymap("i", "(<CR>", "(<CR>)<Esc>O", { noremap = true, desc = "Auto newline in ()" })
--- keymap("i", "[<CR>", "[<CR>]<Esc>O", { noremap = true, desc = "Auto newline in []" })
--- ============================================================================
--- AUTO PAIRS (Consider using a plugin like nvim-autopairs instead)
--- ============================================================================
-local autopairs = {
-  { "(", ")" },
-  { "[", "]" },
-  { "{", "}" },
-  { '"', '"' },
-  { "'", "'" },
-  { "`", "`" },
-}
-
-for _, pair in ipairs(autopairs) do
-  keymap("i", pair[1], pair[1] .. pair[2] .. "<Left>", { desc = "Auto pair " .. pair[1] })
-end
-
 vim.cmd [[filetype plugin indent on]]
