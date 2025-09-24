@@ -9,6 +9,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/vs-code/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Users/shayan/.lmstudio/bin"
 export PATH="$PATH:/Users/shayan/go/bin"
+
 # Conda
 _CONDA_ROOT="/Users/shayan/miniconda3"
 . "$_CONDA_ROOT/etc/profile.d/conda.sh"
@@ -45,3 +46,10 @@ DOTFILES=$HOME/dotfiles
 
 # Zsh itself
 [ ! -L "$HOME/.zshrc" ] && ln -sfn $DOTFILES/zshrc $HOME/.zshrc
+
+
+#badbakhti
+#
+# export http_proxy=socks5://127.0.0.1:12334
+# export https_proxy=socks5://127.0.0.1:12334
+# export all_proxy=socks5://127.0.0.1:123334

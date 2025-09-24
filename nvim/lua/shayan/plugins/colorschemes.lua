@@ -33,17 +33,17 @@ return {
 
 -- ===============================================================
 
-    -- "rose-pine/neovim",
-    -- config = function()
-    --     require("rose-pine").setup({
-    --         styles = {
-    --             transparency = true,
-    --             italic = true,
-    --             bold = true
-    --         }
-    --     })
-    --     vim.cmd("colorscheme rose-pine-moon")
-    -- end,
+    "rose-pine/neovim",
+    config = function()
+        require("rose-pine").setup({
+            styles = {
+                transparency = true,
+                italic = true,
+                bold = true
+            }
+        })
+        vim.cmd("colorscheme rose-pine-moon")
+    end,
 
 -- ===============================================================
 
@@ -53,7 +53,7 @@ return {
     -- config = function()
     --     require("catppuccin").setup({
     --         flavour = "mocha",
-    --         transparent_background = false,
+    --         transparent_background = true,
     --         styles = {
     --             keywords = {"italic", "bold"},
     --             strings  = {"italic"},
@@ -66,16 +66,16 @@ return {
 
 -- ===============================================================
 
-    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    name = "gruvbox",
-    config = function()
-        require("gruvbox").setup({
-            styles = {
-                transparency = true
-            }
-        })
-        vim.cmd("colorscheme gruvbox-hard")
-    end
+    -- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    -- name = "gruvbox",
+    -- config = function()
+    --     require("gruvbox").setup({
+    --         styles = {
+    --             transparency = false
+    --         }
+    --     })
+    --     vim.cmd("colorscheme gruvbox-hard")
+    -- end
 
 -- ===============================================================
 
