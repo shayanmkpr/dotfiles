@@ -1,6 +1,1 @@
-#background = 000000
-#theme = gruvbox-material
 macos-titlebar-style = hidden
-font-family = "MesloLGLDZ Nerd Font Mono"
-#background-opacity = 0.8
-#background-blur = true
