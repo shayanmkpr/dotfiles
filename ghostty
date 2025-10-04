@@ -1,5 +1,6 @@
-background = 000000
-theme = carbonfox
+#background = 000000
+#theme = gruvbox-material
 macos-titlebar-style = hidden
-background-opacity = 0.8
-background-blur = true
+font-family = "MesloLGLDZ Nerd Font Mono"
+#background-opacity = 0.8
+#background-blur = true
