@@ -20,16 +20,16 @@ return {
 
 -- ===============================================================
 
-    -- "EdenEast/nightfox.nvim",
-    -- config = function()
-    --     require("nightfox").setup({
-    --         style = "nightfox",
-    --         options = {
-    --         transparent = true
-    --         }
-    --     })
-    --     vim.cmd("colorscheme carbonfox")
-    -- end
+    "EdenEast/nightfox.nvim",
+    config = function()
+        require("nightfox").setup({
+            style = "nightfox",
+            options = {
+            -- transparent = true
+            }
+        })
+        vim.cmd("colorscheme terafox")
+    end
 
 -- ===============================================================
 
@@ -53,7 +53,7 @@ return {
     -- config = function()
     --     require("catppuccin").setup({
     --         flavour = "mocha",
-    --         transparent_background = true,
+    --         transparent_background = false,
     --         styles = {
     --             keywords = {"italic", "bold"},
     --             strings  = {"italic"},
@@ -61,21 +61,21 @@ return {
     --             numbers = {"bold"}
     --         }
     --     })
-    --     vim.cmd("colorscheme catppuccin")
+    --     vim.cmd("colorscheme catppuccin-mocha")
     -- end
 
 -- ===============================================================
 
-    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    name = "gruvbox",
-    config = function()
-        require("gruvbox").setup({
-            styles = {
-                transparency = false
-            }
-        })
-        vim.cmd("colorscheme gruvbox")
-    end
+    -- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    -- name = "gruvbox",
+    -- config = function()
+    --     require("gruvbox").setup({
+    --         styles = {
+    --             transparency = false
+    --         }
+    --     })
+    --     vim.cmd("colorscheme gruvbox")
+    -- end
 
 -- ===============================================================
 
