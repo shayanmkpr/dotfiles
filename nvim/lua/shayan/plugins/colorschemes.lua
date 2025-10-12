@@ -20,16 +20,16 @@ return {
 
 -- ===============================================================
 
-    "EdenEast/nightfox.nvim",
-    config = function()
-        require("nightfox").setup({
-            style = "nightfox",
-            options = {
-            -- transparent = true
-            }
-        })
-        vim.cmd("colorscheme terafox")
-    end
+    -- "EdenEast/nightfox.nvim",
+    -- config = function()
+    --     require("nightfox").setup({
+    --         style = "nightfox",
+    --         options = {
+    --         -- transparent = true
+    --         }
+    --     })
+    --     vim.cmd("colorscheme terafox")
+    -- end
 
 -- ===============================================================
 
@@ -79,12 +79,12 @@ return {
 
 -- ===============================================================
 
-    -- "rebelot/kanagawa.nvim",
-    -- name = "kanagawa",
-    -- config = function()
-    --     require("kanagawa").setup({
-    --         transparent = false
-    --     })
-    --     vim.cmd("colorscheme kanagawa-wave")
-    -- end
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    config = function()
+        require("kanagawa").setup({
+            transparent = false
+        })
+        vim.cmd("colorscheme kanagawa-wave")
+    end
 }

@@ -1,5 +1,3 @@
 macos-titlebar-style = hidden
-#theme = Breeze
-theme = terafox
 background-opacity = 0.9
 background-blur = true
