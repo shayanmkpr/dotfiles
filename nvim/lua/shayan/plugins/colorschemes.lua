@@ -66,25 +66,25 @@ return {
 
 -- ===============================================================
 
-    -- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    -- name = "gruvbox",
-    -- config = function()
-    --     require("gruvbox").setup({
-    --         styles = {
-    --             transparency = false
-    --         }
-    --     })
-    --     vim.cmd("colorscheme gruvbox")
-    -- end
+    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    name = "gruvbox",
+    config = function()
+        require("gruvbox").setup({
+            styles = {
+                transparency = false
+            }
+        })
+        vim.cmd("colorscheme gruvbox-hard")
+    end
 
 -- ===============================================================
 
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
-    config = function()
-        require("kanagawa").setup({
-            transparent = false
-        })
-        vim.cmd("colorscheme kanagawa-wave")
-    end
+    -- "rebelot/kanagawa.nvim",
+    -- name = "kanagawa",
+    -- config = function()
+    --     require("kanagawa").setup({
+    --         transparent = false
+    --     })
+    --     vim.cmd("colorscheme kanagawa-wave")
+    -- end
 }

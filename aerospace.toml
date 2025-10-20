@@ -54,10 +54,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
 inner.horizontal = 5
 inner.vertical =   5
-outer.left =       10
+outer.left =       8
 outer.bottom =     8
 outer.top =        5
-outer.right =      10
+outer.right =      8
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -190,12 +190,8 @@ if.app-id = 'com.tinyspeck.slackmacgap'
 run = "move-node-to-workspace S"
 
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
-run = "move-node-to-workspace V"
-
-[[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = "move-node-to-workspace C"
+run = "move-node-to-workspace V"
 
 [[on-window-detected]]
 if.app-id = 'org.jkiss.dbeaver.core.product'
