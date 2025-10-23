@@ -38,6 +38,10 @@ DOTFILES=$HOME/dotfiles
 # Neovim
 [ ! -L "$HOME/.config/nvim" ] && ln -sfn $DOTFILES/nvim $HOME/.config/nvim
 
+# VIM
+[ ! -L "$HOME/.vimrc" ] && ln -sfn $DOTFILES/vimrc $HOME/.vimrc
+
+
 # Ghostty
 [ ! -L "$HOME/Library/Application Support/com.mitchellh.ghostty/config" ] && ln -sfn $DOTFILES/ghostty "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
