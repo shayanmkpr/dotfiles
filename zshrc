@@ -6,7 +6,7 @@ fi
 # Paths
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/vs-code/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:$PATH:Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Users/shayan/.lmstudio/bin"
 export PATH="$PATH:/Users/shayan/go/bin"
 
@@ -24,9 +24,15 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
-command -v eza &>/dev/null && alias ls="eza --icons=always"
+command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directories-first"
+alias gl="git log --graph --stat --decorate --all"
 
-# Vi mode
+autoload -Uz compinit && compinit
+setopt autopushd
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# Vim mode
 bindkey -v
 bindkey '^ ' autosuggest-accept  # Optional
 
@@ -52,8 +58,7 @@ DOTFILES=$HOME/dotfiles
 [ ! -L "$HOME/.zshrc" ] && ln -sfn $DOTFILES/zshrc $HOME/.zshrc
 
 
-#badbakhti
-#
+# Export all proxies to hiddify default port (:12334)
 # export http_proxy=socks5://127.0.0.1:12334
 # export https_proxy=socks5://127.0.0.1:12334
 # export all_proxy=socks5://127.0.0.1:123334

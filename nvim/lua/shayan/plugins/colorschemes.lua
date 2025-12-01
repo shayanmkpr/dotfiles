@@ -6,7 +6,6 @@ return {
     -- config = function()
     --     require("tokyonight").setup({
     --         style = "night",
-    --         -- make comments italic
     --         styles = {
     --             comments = { italic = true },
     --             keywords = { italic = true },
@@ -25,7 +24,7 @@ return {
     --     require("nightfox").setup({
     --         style = "nightfox",
     --         options = {
-    --         -- transparent = true
+    --         transparent = true
     --         }
     --     })
     --     vim.cmd("colorscheme terafox")
@@ -53,7 +52,7 @@ return {
     -- config = function()
     --     require("catppuccin").setup({
     --         flavour = "mocha",
-    --         transparent_background = false,
+    --         transparent_background = true,
     --         styles = {
     --             keywords = {"italic", "bold"},
     --             strings  = {"italic"},
@@ -71,7 +70,7 @@ return {
     config = function()
         require("gruvbox").setup({
             styles = {
-                transparency = false
+                transparency = true
             }
         })
         vim.cmd("colorscheme gruvbox-hard")

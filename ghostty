@@ -1,5 +1,5 @@
 macos-titlebar-style = hidden
-theme = gruvbox-material
-font-family= Monaco
-background-opacity = 0.9
+background = #000000
+#theme = gruvbox-material
+background-opacity = 0.8
 background-blur = true

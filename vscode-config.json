@@ -1,0 +1,61 @@
+{
+    "editor.fontSize": 16,
+    "editor.lineNumbers": "relative",
+    "python.defaultInterpreterPath": "/Users/shayan/miniconda3/envs/neuro",
+    "jupyter.jupyterLaunchTimeout": 600000,
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "vim.overrideCopy": false,
+    "vim.useSystemClipboard": true,
+    "notebook.lineNumbers": "on",
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    // "breadcrumbs.enabled": false,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "w"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<leader>", "q"],
+            "commands": [":q"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.terminal.toggleTerminal"]
+        },
+        {
+            "before": ["<leader>", "v", "s"],
+            "commands": [
+                "workbench.action.splitEditorRight",
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": ["<leader>", "v", "v"],
+            "commands": ["workbench.action.navigateEditorGroups"]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "commands": ["workbench.action.toggleAuxiliaryBar"]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["<leader>", "y"],
+            "after": ["\"", "*", "y"]
+        }
+    ],
+    "workbench.iconTheme": "Monokai Pro Light Icons",
+    "workbench.activityBar.location": "top",
+    "workbench.colorTheme": "Dracula Theme"
+}
