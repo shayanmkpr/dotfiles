@@ -100,7 +100,12 @@ return {
           end,
           ["gopls"] = function()
             lspconfig.gopls.setup({
-              capabilities = capabilities,
+              capabilities = {
+				capabilities,
+					textDocument = {
+						  diagnostic = { dynamicRegistration = true }
+						}
+							},
               cmd = { "gopls" },
               settings = {
                 gopls = {

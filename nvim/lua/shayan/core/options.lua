@@ -64,27 +64,4 @@ opt.spelllang = { "en_us" }
 -- ============================================================================
 opt.lazyredraw = true -- Don't redraw during macros
 opt.ttyfast = true -- Faster terminal connection
-
--- ============================================================================
--- KEYMAPS
--- ============================================================================
-local keymap = vim.keymap.set
-
--- Visual mode indenting (keep selection)
-keymap("v", "<", "<gv", { desc = "Indent left and keep selection" })
-keymap("v", ">", ">gv", { desc = "Indent right and keep selection" })
-
--- Better navigation
-keymap("n", "j", "gj", { desc = "Move down by visual line" })
-keymap("n", "k", "gk", { desc = "Move up by visual line" })
-
--- Clear search highlights
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
-
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-keymap("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
-keymap("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
-keymap("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
-
 vim.cmd [[filetype plugin indent on]]

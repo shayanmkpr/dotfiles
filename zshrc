@@ -26,6 +26,7 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Aliases
 command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directories-first"
 alias gl="git log --graph --stat --decorate --all"
+alias tree="tree -I '.git'"
 
 autoload -Uz compinit && compinit
 setopt autopushd

@@ -24,12 +24,12 @@ return {
     --     require("nightfox").setup({
     --         style = "nightfox",
     --         options = {
-    --         transparent = true
+    --         transparent = false
     --         }
     --     })
     --     vim.cmd("colorscheme terafox")
     -- end
-
+    --
 -- ===============================================================
 
     -- "rose-pine/neovim",
@@ -46,35 +46,35 @@ return {
 
 -- ===============================================================
 
-    -- "catppuccin/nvim",
-    -- name = "catppuccin",
-    -- priority = 1000,
-    -- config = function()
-    --     require("catppuccin").setup({
-    --         flavour = "mocha",
-    --         transparent_background = true,
-    --         styles = {
-    --             keywords = {"italic", "bold"},
-    --             strings  = {"italic"},
-    --             comments = {"italic", "bold"},
-    --             numbers = {"bold"}
-    --         }
-    --     })
-    --     vim.cmd("colorscheme catppuccin-mocha")
-    -- end
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
+        require("catppuccin").setup({
+            flavour = "mocha",
+            transparent_background = false,
+            styles = {
+                keywords = {"italic", "bold"},
+                strings  = {"italic"},
+                comments = {"italic", "bold"},
+                numbers = {"bold"}
+            }
+        })
+        vim.cmd("colorscheme catppuccin-mocha")
+    end
 
 -- ===============================================================
 
-    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    name = "gruvbox",
-    config = function()
-        require("gruvbox").setup({
-            styles = {
-                transparency = true
-            }
-        })
-        vim.cmd("colorscheme gruvbox-hard")
-    end
+    -- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    -- name = "gruvbox",
+    -- config = function()
+    --     require("gruvbox").setup({
+    --         styles = {
+    --             transparency = false
+    --         }
+    --     })
+    --     vim.cmd("colorscheme gruvbox-hard")
+    -- end
 
 -- ===============================================================
 
