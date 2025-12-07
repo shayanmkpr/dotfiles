@@ -46,22 +46,22 @@ return {
 
 -- ===============================================================
 
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-        require("catppuccin").setup({
-            flavour = "mocha",
-            transparent_background = false,
-            styles = {
-                keywords = {"italic", "bold"},
-                strings  = {"italic"},
-                comments = {"italic", "bold"},
-                numbers = {"bold"}
-            }
-        })
-        vim.cmd("colorscheme catppuccin-mocha")
-    end
+    -- "catppuccin/nvim",
+    -- name = "catppuccin",
+    -- priority = 1000,
+    -- config = function()
+    --     require("catppuccin").setup({
+    --         flavour = "mocha",
+    --         transparent_background = false,
+    --         styles = {
+    --             keywords = {"italic", "bold"},
+    --             strings  = {"italic"},
+    --             comments = {"italic", "bold"},
+    --             numbers = {"bold"}
+    --         }
+    --     })
+    --     vim.cmd("colorscheme catppuccin-mocha")
+    -- end
 
 -- ===============================================================
 
@@ -86,4 +86,13 @@ return {
     --     })
     --     vim.cmd("colorscheme kanagawa-wave")
     -- end
+
+-- ===============================================================
+
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require('nordic').load()
+    end
 }
