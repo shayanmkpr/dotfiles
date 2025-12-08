@@ -2,5 +2,5 @@ macos-titlebar-style = hidden
 background = #000000
 #theme = gruvbox-material
 background-opacity = 0.8
-background-blur = false
+background-blur = true
 # theme = terafox

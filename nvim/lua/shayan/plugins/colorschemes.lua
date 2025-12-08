@@ -19,16 +19,16 @@ return {
 
 -- ===============================================================
 
-    -- "EdenEast/nightfox.nvim",
-    -- config = function()
-    --     require("nightfox").setup({
-    --         style = "nightfox",
-    --         options = {
-    --         transparent = false
-    --         }
-    --     })
-    --     vim.cmd("colorscheme terafox")
-    -- end
+    "EdenEast/nightfox.nvim",
+    config = function()
+        require("nightfox").setup({
+            style = "nightfox",
+            options = {
+            transparent = false
+            }
+        })
+        vim.cmd("colorscheme terafox")
+    end
     --
 -- ===============================================================
 
@@ -89,10 +89,10 @@ return {
 
 -- ===============================================================
 
-    'AlexvZyl/nordic.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require('nordic').load()
-    end
+    -- 'AlexvZyl/nordic.nvim',
+    -- lazy = false,
+    -- priority = 1000,
+    -- config = function()
+    --     require('nordic').load()
+    -- end
 }
