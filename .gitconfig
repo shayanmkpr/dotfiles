@@ -1,0 +1,18 @@
+[user]
+	email = shayan.malekpour99@gmail.com
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	side-by-side = true
+	features = side-by-side line-numbers
+	syntax-theme = Monokai Extended
+[merge]
+	conflictStyle = diff3
+[push]
+	forceWithLease = true
+[gc]
+	reflogExpire = 365.days
+[advice]
+	pushNonFastForwardFileLimit = 10485760

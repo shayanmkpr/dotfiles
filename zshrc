@@ -39,6 +39,9 @@ bindkey '^ ' autosuggest-accept  # Optional
 
 DOTFILES=$HOME/dotfiles
 
+# Git
+[ ! -L "$HOME/.gitconfig" ] && ln -sfn $DOTFILES/.gitconfig $HOME/.gitconfig
+
 # AeroSpace
 [ ! -L "$HOME/.config/aerospace/aerospace.toml" ] && ln -sfn $DOTFILES/aerospace.toml $HOME/.config/aerospace/aerospace.toml
 
