@@ -19,16 +19,16 @@ return {
 
 -- ===============================================================
 
-    "EdenEast/nightfox.nvim",
-    config = function()
-        require("nightfox").setup({
-            style = "nightfox",
-            options = {
-            transparent = false
-            }
-        })
-        vim.cmd("colorscheme terafox")
-    end
+    -- "EdenEast/nightfox.nvim",
+    -- config = function()
+    --     require("nightfox").setup({
+    --         style = "nightfox",
+    --         options = {
+    --         transparent = false
+    --         }
+    --     })
+    --     vim.cmd("colorscheme terafox")
+    -- end
     --
 -- ===============================================================
 
@@ -65,16 +65,16 @@ return {
 
 -- ===============================================================
 
-    -- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    -- name = "gruvbox",
-    -- config = function()
-    --     require("gruvbox").setup({
-    --         styles = {
-    --             transparency = false
-    --         }
-    --     })
-    --     vim.cmd("colorscheme gruvbox-hard")
-    -- end
+    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    name = "gruvbox",
+    config = function()
+        require("gruvbox").setup({
+            styles = {
+                transparency = false
+            }
+        })
+        vim.cmd("colorscheme gruvbox-hard")
+    end
 
 -- ===============================================================
 

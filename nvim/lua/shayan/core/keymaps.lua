@@ -19,6 +19,8 @@ keymap("v", ">", ">gv", { desc = "Indent right and keep selection" })
 keymap("n", "<leader>vs", "<cmd>vsplit<CR><cmd>Telescope find_files<CR>")
 keymap("n", "<leader>r", "<cmd>reg<CR>")
 
+keymap("n", "<leader>g", ":bnext<CR>")
+keymap("n", "<leader>s", ":bprevious<CR>")
+
 -- Thank the prime not me.
 keymap("n", "<leader>re", "oif err != nil {<CR>}<ESC>O")
-
