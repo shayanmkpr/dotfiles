@@ -1,98 +1,117 @@
 return {
--- ===============================================================
+	-- ===============================================================
 
-    -- "folke/tokyonight.nvim",
-    -- priority = 1000,
-    -- config = function()
-    --     require("tokyonight").setup({
-    --         style = "night",
-    --         styles = {
-    --             comments = { italic = true },
-    --             keywords = { italic = true },
-    --             functions = { italic = true },
-    --         },
-    --         transparent = true
-    --     })
-    --
-    --     vim.cmd("colorscheme tokyonight")
-    -- end,
+	-- "folke/tokyonight.nvim",
+	-- priority = 1000,
+	-- config = function()
+	--     require("tokyonight").setup({
+	--         style = "night",
+	--         styles = {
+	--             comments = { italic = true },
+	--             keywords = { italic = true },
+	--             functions = { italic = true },
+	--         },
+	--         transparent = true
+	--     })
+	--
+	--     vim.cmd("colorscheme tokyonight")
+	-- end,
 
--- ===============================================================
+	-- ===============================================================
 
-    -- "EdenEast/nightfox.nvim",
-    -- config = function()
-    --     require("nightfox").setup({
-    --         style = "nightfox",
-    --         options = {
-    --         transparent = false
-    --         }
-    --     })
-    --     vim.cmd("colorscheme terafox")
-    -- end
-    --
--- ===============================================================
+	-- "EdenEast/nightfox.nvim",
+	-- config = function()
+	--     require("nightfox").setup({
+	--         style = "nightfox",
+	--         options = {
+	--         transparent = false
+	--         }
+	--     })
+	--     vim.cmd("colorscheme terafox")
+	-- end
+	--
+	-- ===============================================================
 
-    -- "rose-pine/neovim",
-    -- config = function()
-    --     require("rose-pine").setup({
-    --         styles = {
-    --             transparency = true,
-    --             italic = true,
-    --             bold = true
-    --         }
-    --     })
-    --     vim.cmd("colorscheme rose-pine-moon")
-    -- end,
+	-- "rose-pine/neovim",
+	-- config = function()
+	--     require("rose-pine").setup({
+	--         styles = {
+	--             transparency = true,
+	--             italic = true,
+	--             bold = true
+	--         }
+	--     })
+	--     vim.cmd("colorscheme rose-pine-moon")
+	-- end,
 
--- ===============================================================
+	-- ===============================================================
 
-    -- "catppuccin/nvim",
-    -- name = "catppuccin",
-    -- priority = 1000,
-    -- config = function()
-    --     require("catppuccin").setup({
-    --         flavour = "mocha",
-    --         transparent_background = false,
-    --         styles = {
-    --             keywords = {"italic", "bold"},
-    --             strings  = {"italic"},
-    --             comments = {"italic", "bold"},
-    --             numbers = {"bold"}
-    --         }
-    --     })
-    --     vim.cmd("colorscheme catppuccin-mocha")
-    -- end
+	-- "catppuccin/nvim",
+	-- name = "catppuccin",
+	-- priority = 1000,
+	-- config = function()
+	--     require("catppuccin").setup({
+	--         flavour = "mocha",
+	--         transparent_background = false,
+	--         styles = {
+	--             keywords = {"italic", "bold"},
+	--             strings  = {"italic"},
+	--             comments = {"italic", "bold"},
+	--             numbers = {"bold"}
+	--         }
+	--     })
+	--     vim.cmd("colorscheme catppuccin-mocha")
+	-- end
 
--- ===============================================================
+	-- ===============================================================
 
-    "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-    name = "gruvbox",
-    config = function()
-        require("gruvbox").setup({
-            styles = {
-                transparency = false
-            }
-        })
-        vim.cmd("colorscheme gruvbox-hard")
-    end
+	-- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+	-- name = "gruvbox",
+	-- config = function()
+	--     require("gruvbox").setup({
+	--         styles = {
+	--             transparency = false
+	--         }
+	--     })
+	--     vim.cmd("colorscheme gruvbox-hard")
+	-- end
 
--- ===============================================================
+	-- ===============================================================
 
-    -- "rebelot/kanagawa.nvim",
-    -- name = "kanagawa",
-    -- config = function()
-    --     require("kanagawa").setup({
-    --         transparent = false
-    --     })
-    --     vim.cmd("colorscheme kanagawa-wave")
-    -- end
+	-- "rebelot/kanagawa.nvim",
+	-- name = "kanagawa",
+	-- config = function()
+	--     require("kanagawa").setup({
+	--         transparent = false
+	--     })
+	--     vim.cmd("colorscheme kanagawa-wave")
+	-- end
 
--- ===============================================================
+	-- ===============================================================
 
-    -- 'AlexvZyl/nordic.nvim',
-    -- lazy = false,
-    -- priority = 1000,
-    -- config = function()
-    --     require('nordic').load()
-    -- end
+	-- 'AlexvZyl/nordic.nvim',
+	-- lazy = false,
+	-- priority = 1000,
+	-- config = function()
+	--     require('nordic').load()
+	-- end
+	--
+
+	-- ===============================================================
+
+	"sainnhe/sonokai",
+	name = "sonokai",
+	priority = 1000,
+	config = function()
+		vim.g.sonokai_style = "espresso"
+
+		-- Enable italics properly (the way Sonokai expects)
+		vim.g.sonokai_enable_italic = 1
+		vim.g.sonokai_disable_italic_comment = 0
+
+		-- Optional but recommended
+		vim.g.sonokai_better_performance = 1
+
+		vim.cmd.colorscheme("sonokai")
+	end,
 }

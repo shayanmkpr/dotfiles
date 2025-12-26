@@ -204,3 +204,7 @@ run = "move-node-to-workspace X"
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace V"
+
+[[on-window-detected]]
+if.app-id = 'com.usebruno.app'
+run = "move-node-to-workspace R"
