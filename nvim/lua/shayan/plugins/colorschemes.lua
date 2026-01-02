@@ -4,17 +4,17 @@ return {
 	-- "folke/tokyonight.nvim",
 	-- priority = 1000,
 	-- config = function()
-	--     require("tokyonight").setup({
-	--         style = "night",
-	--         styles = {
-	--             comments = { italic = true },
-	--             keywords = { italic = true },
-	--             functions = { italic = true },
-	--         },
-	--         transparent = true
-	--     })
+	-- 	require("tokyonight").setup({
+	-- 		style = "night",
+	-- 		styles = {
+	-- 			comments = { italic = true },
+	-- 			keywords = { italic = true },
+	-- 			functions = { italic = true },
+	-- 		},
+	-- 		transparent = true,
+	-- 	})
 	--
-	--     vim.cmd("colorscheme tokyonight")
+	-- 	vim.cmd("colorscheme tokyonight")
 	-- end,
 
 	-- ===============================================================
@@ -65,16 +65,18 @@ return {
 
 	-- ===============================================================
 
-	-- "https://gitlab.com/motaz-shokry/gruvbox.nvim",
-	-- name = "gruvbox",
-	-- config = function()
-	--     require("gruvbox").setup({
-	--         styles = {
-	--             transparency = false
-	--         }
-	--     })
-	--     vim.cmd("colorscheme gruvbox-hard")
-	-- end
+	"https://gitlab.com/motaz-shokry/gruvbox.nvim",
+	name = "gruvbox",
+	config = function()
+		require("gruvbox").setup({
+			styles = {
+				italic = true,
+				transparency = false,
+				bold = true,
+			},
+		})
+		vim.cmd("colorscheme gruvbox-hard")
+	end,
 
 	-- ===============================================================
 
@@ -96,22 +98,4 @@ return {
 	--     require('nordic').load()
 	-- end
 	--
-
-	-- ===============================================================
-
-	"sainnhe/sonokai",
-	name = "sonokai",
-	priority = 1000,
-	config = function()
-		vim.g.sonokai_style = "espresso"
-
-		-- Enable italics properly (the way Sonokai expects)
-		vim.g.sonokai_enable_italic = 1
-		vim.g.sonokai_disable_italic_comment = 0
-
-		-- Optional but recommended
-		vim.g.sonokai_better_performance = 1
-
-		vim.cmd.colorscheme("sonokai")
-	end,
 }
