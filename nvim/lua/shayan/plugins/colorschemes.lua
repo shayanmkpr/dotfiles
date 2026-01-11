@@ -21,27 +21,27 @@ return {
 
 	-- "EdenEast/nightfox.nvim",
 	-- config = function()
-	--     require("nightfox").setup({
-	--         style = "nightfox",
-	--         options = {
-	--         transparent = false
-	--         }
-	--     })
-	--     vim.cmd("colorscheme terafox")
-	-- end
+	-- 	require("nightfox").setup({
+	-- 		style = "nightfox",
+	-- 		options = {
+	-- 			transparent = false,
+	-- 		},
+	-- 	})
+	-- 	vim.cmd("colorscheme terafox")
+	-- end,
 	--
 	-- ===============================================================
 
 	-- "rose-pine/neovim",
 	-- config = function()
-	--     require("rose-pine").setup({
-	--         styles = {
-	--             transparency = true,
-	--             italic = true,
-	--             bold = true
-	--         }
-	--     })
-	--     vim.cmd("colorscheme rose-pine-moon")
+	-- 	require("rose-pine").setup({
+	-- 		styles = {
+	-- 			transparency = true,
+	-- 			italic = true,
+	-- 			bold = true,
+	-- 		},
+	-- 	})
+	-- 	vim.cmd("colorscheme rose-pine-moon")
 	-- end,
 
 	-- ===============================================================
@@ -50,18 +50,18 @@ return {
 	-- name = "catppuccin",
 	-- priority = 1000,
 	-- config = function()
-	--     require("catppuccin").setup({
-	--         flavour = "mocha",
-	--         transparent_background = false,
-	--         styles = {
-	--             keywords = {"italic", "bold"},
-	--             strings  = {"italic"},
-	--             comments = {"italic", "bold"},
-	--             numbers = {"bold"}
-	--         }
-	--     })
-	--     vim.cmd("colorscheme catppuccin-mocha")
-	-- end
+	-- 	require("catppuccin").setup({
+	-- 		flavour = "mocha",
+	-- 		transparent_background = false,
+	-- 		styles = {
+	-- 			keywords = { "italic", "bold" },
+	-- 			strings = { "italic" },
+	-- 			comments = { "italic", "bold" },
+	-- 			numbers = { "bold" },
+	-- 		},
+	-- 	})
+	-- 	vim.cmd("colorscheme catppuccin-mocha")
+	-- end,
 
 	-- ===============================================================
 
@@ -83,19 +83,18 @@ return {
 	-- "rebelot/kanagawa.nvim",
 	-- name = "kanagawa",
 	-- config = function()
-	--     require("kanagawa").setup({
-	--         transparent = false
-	--     })
-	--     vim.cmd("colorscheme kanagawa-wave")
-	-- end
+	-- 	require("kanagawa").setup({
+	-- 		transparent = false,
+	-- 	})
+	-- 	vim.cmd("colorscheme kanagawa-wave")
+	-- end,
 
 	-- ===============================================================
 
-	-- 'AlexvZyl/nordic.nvim',
+	-- "AlexvZyl/nordic.nvim",
 	-- lazy = false,
 	-- priority = 1000,
 	-- config = function()
-	--     require('nordic').load()
-	-- end
-	--
+	-- 	require("nordic").load()
+	-- end,
 }
