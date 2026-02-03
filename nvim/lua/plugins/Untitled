@@ -1,8 +1,0 @@
-Error detected while processing /Users/shayan/dotfiles/nvim/init.lua:
-
-E5113: Error while calling lua chunk: /Users/shayan/.config/nvim/lua/lazy.lua:14: loop or previous error loading module 'lazy'
-stack traceback:
-        [C]: in function 'require'
-        /Users/shayan/.config/nvim/lua/lazy.lua:14: in main chunk
-        [C]: in function 'require'
-        /Users/shayan/dotfiles/nvim/init.lua:3: in main chunk
