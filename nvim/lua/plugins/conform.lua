@@ -4,7 +4,6 @@ return {
 		format_on_save = function(bufnr)
 			local ft = vim.bo[bufnr].filetype
 
-			-- Only enable for these filetypes
 			local allowed = {
 				go = false,
 				lua = true,

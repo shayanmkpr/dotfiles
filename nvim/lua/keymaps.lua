@@ -1,4 +1,3 @@
--- lua/shayan/keymaps.lua
 vim.g.mapleader = " "
 local keymap = vim.keymap.set
 

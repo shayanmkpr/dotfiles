@@ -5,8 +5,8 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	side-by-side = true
-	features = side-by-side line-numbers
+	; side-by-side = true
+	; features = side-by-side line-numbers
 	syntax-theme = Monokai Extended
 [merge]
 	conflictStyle = diff3
@@ -16,3 +16,5 @@
 	reflogExpire = 365.days
 [advice]
 	pushNonFastForwardFileLimit = 10485760
+[url "git@git.revi.voto:"]
+	insteadOf = https://git.revi.voto/

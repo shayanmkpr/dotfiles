@@ -1,2 +1,3 @@
-require("shayan.core")
-require("shayan.lazy")
+require("options")
+require("keymaps")
+require("lazy-setup")

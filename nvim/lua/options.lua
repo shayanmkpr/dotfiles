@@ -1,4 +1,3 @@
--- lua/shayan/options.lua
 local opt = vim.opt
 
 -- ============================================================================
@@ -32,8 +31,8 @@ opt.smartindent = true
 -- ============================================================================
 opt.ignorecase = true
 opt.smartcase = true
-opt.hlsearch = true -- Highlight search results
-opt.incsearch = true -- Show search matches as you type
+opt.hlsearch = true
+opt.incsearch = true
 
 -- ============================================================================
 -- EDITING BEHAVIOR
@@ -41,11 +40,11 @@ opt.incsearch = true -- Show search matches as you type
 opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
 opt.swapfile = false
-opt.backup = false -- Disable backup files
-opt.undofile = true -- Enable persistent undo
+opt.backup = false
+opt.undofile = true
 opt.undolevels = 1000
-opt.timeoutlen = 300 -- Faster key sequence timeout
-opt.updatetime = 250 -- Faster CursorHold events
+opt.timeoutlen = 300
+opt.updatetime = 250
 
 -- ============================================================================
 -- WINDOW SPLITS
@@ -62,6 +61,6 @@ opt.spelllang = { "en_us" }
 -- ============================================================================
 -- PERFORMANCE
 -- ============================================================================
-opt.lazyredraw = true -- Don't redraw during macros
-opt.ttyfast = true -- Faster terminal connection
-vim.cmd [[filetype plugin indent on]]
+opt.lazyredraw = true
+opt.ttyfast = true
+vim.cmd([[filetype plugin indent on]])

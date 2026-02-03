@@ -1,10 +1,9 @@
--- lua/plugins/indent.lua
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
 	opts = {
 		indent = {
-			char = "│", -- change if you want another symbol
+			char = "│",
 		},
 		scope = { enabled = true },
 	},

@@ -1,2 +1,4 @@
 macos-titlebar-style = hidden
 theme = Gruvbox Dark
+
+background-opacity = 0.9
