@@ -1,4 +1,4 @@
-# Powerlevel10k instant prompt
+#: Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -25,8 +25,9 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
 command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directories-first"
-alias gl="git log --graph --stat --decorate --all"
 alias tree="tree -I '.git'"
+alias godebug='dlv debug --headless --listen=:2345 --api-version=2 --log'
+
 
 autoload -Uz compinit && compinit
 setopt autopushd
@@ -61,6 +62,12 @@ DOTFILES=$HOME/dotfiles
 # Zsh itself
 [ ! -L "$HOME/.zshrc" ] && ln -sfn $DOTFILES/zshrc $HOME/.zshrc
 
+# CGO flags for LibRaw and JPEG libraries
+# export CGO_CFLAGS="-I/opt/homebrew/opt/libraw/include -I/opt/homebrew/opt/jpeg/include"
+# export CGO_LDFLAGS="-L/opt/homebrew/opt/libraw/lib -L/opt/homebrew/opt/jpeg/lib"
+
+export CGO_CFLAGS="-I/opt/homebrew/opt/libraw/include -I/opt/homebrew/opt/jpeg-turbo/include"
+export CGO_LDFLAGS="-L/opt/homebrew/opt/libraw/lib -L/opt/homebrew/opt/jpeg-turbo/lib"
 
 # Export all proxies to hiddify default port (:12334)
 # export http_proxy=socks5://127.0.0.1:12334
