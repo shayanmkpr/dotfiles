@@ -1,16 +1,10 @@
 {
-    "editor.fontSize": 16,
+    "editor.fontSize": 14.5,
     "editor.lineNumbers": "relative",
-    "python.defaultInterpreterPath": "/Users/shayan/miniconda3/envs/neuro",
-    "jupyter.jupyterLaunchTimeout": 600000,
-    "terminal.integrated.commandsToSkipShell": [
-        "matlab.interrupt"
-    ],
+    "window.density.editorTabHeight": "compact",
+    "notebook.lineNumbers": "on",
     "vim.overrideCopy": false,
     "vim.useSystemClipboard": true,
-    "notebook.lineNumbers": "on",
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    // "breadcrumbs.enabled": false,
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
@@ -48,14 +42,19 @@
             "before": ["<leader>", "a"],
             "commands": ["workbench.action.toggleAuxiliaryBar"]
         },
-    ],
-    "vim.visualModeKeyBindings": [
         {
-            "before": ["<leader>", "y"],
-            "after": ["\"", "*", "y"]
-        }
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<leader>", "g"],
+            "commands": ["workbench.action.nextEditor"]
+        },
     ],
-    "workbench.iconTheme": "Monokai Pro Light Icons",
-    "workbench.activityBar.location": "top",
-    "workbench.colorTheme": "Dracula Theme"
+    "go.toolsEnvVars": {
+        "CGO_CFLAGS": "-I/opt/homebrew/opt/libraw/include -I/opt/homebrew/opt/jpeg-turbo/include",
+        "CGO_LDFLAGS": "-L/opt/homebrew/opt/libraw/lib -L/opt/homebrew/opt/jpeg-turbo/lib"
+    },
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "cursor.composer.usageSummaryDisplay": "always",
 }
