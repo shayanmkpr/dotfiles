@@ -39,7 +39,9 @@ DOTFILES=$HOME/dotfiles
 [ ! -L "$HOME/Library/Application Support/com.mitchellh.ghostty/config" ] && ln -sfn $DOTFILES/ghostty "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 [ ! -L "$HOME/.tmux.conf" ] && ln -sfn $DOTFILES/tmux.conf $HOME/.tmux.conf
 [ ! -L "$HOME/.zshrc" ] && ln -sfn $DOTFILES/zshrc $HOME/.zshrc
-[ ! -L "$HOME/.config/opencode/agent" ] && ln -sfn $DOTFILES/opencode/agent
+[ ! -L "$HOME/.config/opencode/agent" ] && ln -sfn $DOTFILES/opencode/agent "$HOME/.config/opencode/agent"
+[ ! -L "$HOME/.config/zed/keymap.json" ] && ln -sfn $DOTFILES/zed/keymap.json
+[ ! -L "$HOME/.config/zed/settings.json" ] && ln -sfn $DOTFILES/zed/settings.json
 
 # CGO flags for LibRaw and JPEG libraries
 export CGO_CFLAGS="-I/opt/homebrew/opt/libraw/include -I/opt/homebrew/opt/jpeg-turbo/include"
