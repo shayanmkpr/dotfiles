@@ -1,17 +1,17 @@
-return {
-	"https://gitlab.com/motaz-shokry/gruvbox.nvim",
-	name = "gruvbox",
-	config = function()
-		require("gruvbox").setup({
-			styles = {
-				italic = true,
-				transparency = true,
-				bold = true,
-			},
-		})
-		vim.cmd("colorscheme gruvbox-hard")
-	end,
-}
+-- return {
+-- 	"https://gitlab.com/motaz-shokry/gruvbox.nvim",
+-- 	name = "gruvbox",
+-- 	config = function()
+-- 		require("gruvbox").setup({
+-- 			styles = {
+-- 				italic = true,
+-- 				transparency = true,
+-- 				bold = true,
+-- 			},
+-- 		})
+-- 		vim.cmd("colorscheme gruvbox-hard")
+-- 	end,
+-- }
 --
 -- return {
 -- 	{
@@ -40,40 +40,40 @@ return {
 -- 	},
 -- }
 
--- return {
--- 	{
--- 		"sainnhe/everforest",
--- 		name = "everforest",
--- 		lazy = false,
--- 		priority = 1000,
---
--- 		config = function()
--- 			-- Background style
--- 			vim.g.everforest_background = "hard" -- soft | medium | hard
---
--- 			-- Enable better contrast
--- 			vim.g.everforest_enable_italic = 0
--- 			vim.g.everforest_disable_italic_comment = 0
---
--- 			-- UI options
--- 			vim.g.everforest_transparent_background = 0
--- 			vim.g.everforest_better_performance = 1
---
--- 			-- Optional tweaks
--- 			vim.g.everforest_cursor = "auto"
--- 			vim.g.everforest_ui_contrast = "high"
---
--- 			-- Apply colorscheme
--- 			vim.cmd("colorscheme everforest")
---
--- 			-- Optional highlight tweaks (like your Dracula quirks)
--- 			vim.cmd([[
--- 				hi Operator gui=italic
--- 				hi MatchParen gui=italic,bold
--- 			]])
--- 		end,
--- 	},
--- }
+return {
+	{
+		"sainnhe/everforest",
+		name = "everforest",
+		lazy = false,
+		priority = 1000,
+
+		config = function()
+			-- Background style
+			vim.g.everforest_background = "hard" -- soft | medium | hard
+
+			-- Enable better contrast
+			vim.g.everforest_enable_italic = 0
+			vim.g.everforest_disable_italic_comment = 0
+
+			-- UI options
+			vim.g.everforest_transparent_background = 0
+			vim.g.everforest_better_performance = 1
+
+			-- Optional tweaks
+			vim.g.everforest_cursor = "auto"
+			vim.g.everforest_ui_contrast = "high"
+
+			-- Apply colorscheme
+			vim.cmd("colorscheme everforest")
+
+			-- Optional highlight tweaks (like your Dracula quirks)
+			vim.cmd([[
+				hi Operator gui=italic
+				hi MatchParen gui=italic,bold
+			]])
+		end,
+	},
+}
 
 -- return {
 -- 	{
@@ -92,4 +92,14 @@ return {
 -- 			vim.cmd("colorscheme rose-pine")
 -- 		end,
 -- 	},
+-- }
+
+-- return {
+-- 	"loctvl842/monokai-pro.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("monokai-pro").setup()
+-- 		vim.cmd.colorscheme("monokai-pro-spectrum")
+-- 	end,
 -- }

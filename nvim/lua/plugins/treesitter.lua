@@ -20,8 +20,6 @@ return {
 			"typescript",
 			"html",
 			"css",
-			"markdown",
-			"markdown_inline",
 			"svelte",
 			"bash",
 			"lua",

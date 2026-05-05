@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap.set
 
+keymap("n", "<leader>a", ":AvanteChat<CR>")
+keymap("n", "<leader>A", ":AvanteChatNew<CR>")
+
 keymap("n", "<leader>w", ":w<CR>")
 keymap("n", "<leader>q", ":q<CR>")
 keymap("n", "<leader>x", ":q!<CR>")
