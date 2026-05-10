@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "max_output_tokens": 69,
+      "model": "google/gemini-3-flash-preview",
+      "api_url": "https://openrouter.ai/api/v1",
+    },
+  },
+  "cli_default_open_behavior": "new_window",
   "use_system_window_tabs": false,
   "when_closing_with_no_tabs": "keep_window_open",
   "project_panel": {
@@ -48,18 +56,18 @@
   "agent": {
     "flexible": true,
     "sidebar_side": "right",
-    "dock": "right",
-    "default_profile": "write",
+    "dock": "left",
+    "default_profile": "minimal",
     "profiles": {
       "search": {
         "name": "search",
         "tools": {
+          "search_web": true,
           "grep": true,
           "thinking": true,
           "open": true,
           "read_file": true,
           "now": true,
-          "web_search": true,
         },
         "enable_all_context_servers": false,
         "context_servers": {},
@@ -68,16 +76,13 @@
     "default_model": {
       "enable_thinking": true,
       "provider": "openrouter",
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "moonshotai/kimi-k2.6",
     },
   },
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware",
     "background_coloring": "indent_aware",
-  },
-  "chat_panel": {
-    "dock": "right",
   },
   "minimap": {
     "show": "auto",
@@ -108,7 +113,7 @@
   "icon_theme": {
     "mode": "dark",
     "light": "Material Icon Theme",
-    "dark": "Material Icon Theme"
+    "dark": "Material Icon Theme",
   },
   "buffer_font_family": "MesloLGSDZ Nerd Font",
   "ui_font_size": 13.0,
@@ -116,6 +121,6 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Gruvbox Dark",
+    "dark": "Ayu Dark",
   },
 }

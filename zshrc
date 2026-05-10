@@ -21,6 +21,7 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Aliases
 command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directories-first"
 alias godebug='dlv debug --headless --listen=:2345 --api-version=2 --log'
+alias sdlocal="ssh adminsh@192.168.16.51"
 
 autoload -Uz compinit && compinit
 setopt autopushd
@@ -68,3 +69,24 @@ openrouter-api() {
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Override Claude Code to use OpenRouter API
+open-claude() {
+	source ~/.secrets
+    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+    export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
+    export ANTHROPIC_API_KEY=""
+
+    export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek/deepseek-v4-pro"
+    export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek/deepseek-v4-flash"
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek/deepseek-v4-flash"
+    export CLAUDE_CODE_SUBAGENT_MODEL="deepseek/deepseek-v4-flash"
+
+    claude ""
+}
+
+claude_reset() {
+    unset ANTHROPIC_BASE_URL ANTHROPIC_AUTH_TOKEN ANTHROPIC_API_KEY
+    unset ANTHROPIC_CUSTOM_HEADERS ANTHROPIC_MODEL ANTHROPIC_SMALL_FAST_MODEL
+    echo "Claude environment has been reset to default."
+}
