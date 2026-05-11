@@ -22,6 +22,7 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directories-first"
 alias godebug='dlv debug --headless --listen=:2345 --api-version=2 --log'
 alias sdlocal="ssh adminsh@192.168.16.51"
+alias sdlocalsrvc="ssh root@192.168.30.14"
 
 autoload -Uz compinit && compinit
 setopt autopushd
