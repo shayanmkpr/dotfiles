@@ -7,9 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "languages": {
+    "Go": {
+      "show_edit_predictions": true
+    }
+  },
+  "show_edit_predictions": true,
   "edit_predictions": {
+    "ollama": {
+      "api_url": ""
+    },
+    "mode": "eager",
+    "provider": "open_ai_compatible_api",
     "open_ai_compatible_api": {
-      "max_output_tokens": 69,
+      "max_output_tokens": 200,
       "model": "google/gemini-3-flash-preview",
       "api_url": "https://openrouter.ai/api/v1",
     },
@@ -24,10 +35,11 @@
     "dock": "left",
   },
   "tab_bar": {
-    "show": true,
+    "show": false,
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": true,
   },
+  "max_tabs": 1,
   "tabs": {
     "file_icons": true,
     "git_status": true,
@@ -56,8 +68,8 @@
   "agent": {
     "flexible": true,
     "sidebar_side": "right",
-    "dock": "left",
-    "default_profile": "minimal",
+    "dock": "right",
+    "default_profile": "write",
     "profiles": {
       "search": {
         "name": "search",
@@ -74,9 +86,9 @@
       },
     },
     "default_model": {
-      "enable_thinking": true,
+      "enable_thinking": false,
       "provider": "openrouter",
-      "model": "moonshotai/kimi-k2.6",
+      "model": "mistralai/devstral-2512",
     },
   },
   "indent_guides": {
@@ -85,7 +97,8 @@
     "background_coloring": "indent_aware",
   },
   "minimap": {
-    "show": "auto",
+    "thumb": "hover",
+    "show": "never",
   },
   "inlay_hints": {
     "enabled": false,
@@ -121,6 +134,6 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Ayu Dark",
+    "dark": "Zedokai (Filter Ristretto)",
   },
 }

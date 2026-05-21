@@ -42,8 +42,7 @@ DOTFILES=$HOME/dotfiles
 [ ! -L "$HOME/.tmux.conf" ] && ln -sfn $DOTFILES/tmux.conf $HOME/.tmux.conf
 [ ! -L "$HOME/.zshrc" ] && ln -sfn $DOTFILES/zshrc $HOME/.zshrc
 [ ! -L "$HOME/.config/opencode/agent" ] && ln -sfn $DOTFILES/opencode/agent "$HOME/.config/opencode/agent"
-[ ! -L "$HOME/.config/zed/keymap.json" ] && ln -sfn $DOTFILES/zed/keymap.json
-[ ! -L "$HOME/.config/zed/settings.json" ] && ln -sfn $DOTFILES/zed/settings.json
+[ ! -L "$HOME/.config/opencode/opencode.json" ] && ln -sfn $DOTFILES/opencode/opencode.json "$HOME/.config/opencode/opencode.json"
 
 # CGO flags for LibRaw and JPEG libraries
 export CGO_CFLAGS="-I/opt/homebrew/opt/libraw/include -I/opt/homebrew/opt/jpeg-turbo/include"
@@ -78,7 +77,7 @@ open-claude() {
     export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
     export ANTHROPIC_API_KEY=""
 
-    export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek/deepseek-v4-pro"
+    export ANTHROPIC_DEFAULT_OPUS_MODEL="moonshotai/kimi-k2.6"
     export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek/deepseek-v4-flash"
     export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek/deepseek-v4-flash"
     export CLAUDE_CODE_SUBAGENT_MODEL="deepseek/deepseek-v4-flash"

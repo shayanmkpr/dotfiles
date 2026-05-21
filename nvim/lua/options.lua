@@ -15,7 +15,9 @@ opt.background = "dark"
 opt.scrolloff = 8
 
 -- Netrw file explorer
-vim.g.netrw_liststyle = 3
+vim.g.netrw_banner = 0
+vim.g.netrw_sort_sequence = "[/]$,*" -- Sort dirs first
+vim.o.fillchars = "eob: " -- Clean empty lines
 
 -- ============================================================================
 -- INDENTATION & FORMATTING
