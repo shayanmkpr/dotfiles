@@ -7,15 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "split",
+  "agent_servers": {
+    "cline": {
+      "type": "registry",
+    },
+  },
   "languages": {
     "Go": {
-      "show_edit_predictions": true
-    }
+      "show_edit_predictions": true,
+    },
   },
   "show_edit_predictions": true,
   "edit_predictions": {
     "ollama": {
-      "api_url": ""
+      "api_url": "",
     },
     "mode": "eager",
     "provider": "open_ai_compatible_api",
@@ -35,11 +41,11 @@
     "dock": "left",
   },
   "tab_bar": {
-    "show": false,
+    "show": true,
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": true,
   },
-  "max_tabs": 1,
+  "max_tabs": 5,
   "tabs": {
     "file_icons": true,
     "git_status": true,
@@ -69,7 +75,7 @@
     "flexible": true,
     "sidebar_side": "right",
     "dock": "right",
-    "default_profile": "write",
+    "default_profile": "ask",
     "profiles": {
       "search": {
         "name": "search",
@@ -94,28 +100,10 @@
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware",
-    "background_coloring": "indent_aware",
+    "background_coloring": "disabled",
   },
   "minimap": {
-    "thumb": "hover",
     "show": "never",
-  },
-  "inlay_hints": {
-    "enabled": false,
-    "show_value_hints": false,
-    "show_type_hints": false,
-    "show_parameter_hints": false,
-    "show_other_hints": true,
-    "show_background": true,
-    "edit_debounce_ms": 700,
-    "scroll_debounce_ms": 50,
-    "toggle_on_modifiers_press": {
-      "control": true,
-      "alt": true,
-      "shift": true,
-      "platform": true,
-      "function": true,
-    },
   },
   "telemetry": {
     "diagnostics": false,
@@ -128,9 +116,7 @@
     "light": "Material Icon Theme",
     "dark": "Material Icon Theme",
   },
-  "buffer_font_family": "MesloLGSDZ Nerd Font",
-  "ui_font_size": 13.0,
-  "buffer_font_size": 15.0,
+  "ui_font_size": 14.0,
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",

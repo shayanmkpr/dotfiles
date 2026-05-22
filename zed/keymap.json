@@ -1,0 +1,12 @@
+[
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "space f": "file_finder::Toggle",
+      "space w": "workspace::Save",
+      "space e": "workspace::ToggleLeftDock",
+      "space a": "agent::FocusAgent",
+      "space g": "tab_switcher::ToggleAll",
+    },
+  },
+]

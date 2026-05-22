@@ -35,22 +35,22 @@ return {
 				local map = vim.keymap.set
 				map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 				map("n", "gD", vim.lsp.buf.declaration, opts)
-				map("n", "gi", function()
-					vim.lsp.buf.implementation({
-						on_list = function(options)
-							local max = 200
-							if #options.items > max then
-								local t = {}
-								for i = 1, max do t[i] = options.items[i] end
-								options.items = t
-							end
-							vim.fn.setqflist({}, " ", options)
-							vim.cmd("Telescope quickfix")
-						end,
-					})
-				end, opts)
+				-- map("n", "gi", function()
+				-- 	vim.lsp.buf.implementation({
+				-- 		on_list = function(options)
+				-- 			local max = 200
+				-- 			if #options.items > max then
+				-- 				local t = {}
+				-- 				for i = 1, max do t[i] = options.items[i] end
+				-- 				options.items = t
+				-- 			end
+				-- 			vim.fn.setqflist({}, " ", options)
+				-- 			vim.cmd("Telescope quickfix")
+				-- 		end,
+				-- 	})
+				-- end, opts)
 				map("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-				map("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+				map("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
 				map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 				map("n", "<leader>rn", vim.lsp.buf.rename, opts)
 				map("n", "K", vim.lsp.buf.hover, opts)
