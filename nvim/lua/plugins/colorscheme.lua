@@ -4,7 +4,7 @@ return {
 	priority = 1000,
 	config = function()
 		require("monokai-pro").setup({
-			transparent_background = false,
+			transparent_background = true,
 			devicons = true,
 			styles = {
 				comment = { italic = true },
@@ -16,13 +16,13 @@ return {
 				annotation = { italic = true },
 				tag_attribute = { italic = true },
 			},
-			filter = "ristretto", -- classic | octagon | pro | machine | ristretto | spectrum
+			filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
 			day_night = {
 				enable = false,
 				day_filter = "ristretto",
-				night_filter = "machine",
+				night_filter = "octagon",
 			},
 		})
-		vim.cmd.colorscheme("monokai-pro")
+		vim.cmd.colorscheme("monokai-pro-ristretto")
 	end,
 }

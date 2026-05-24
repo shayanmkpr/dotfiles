@@ -63,6 +63,4 @@ opt.spelllang = { "en_us" }
 -- ============================================================================
 -- PERFORMANCE
 -- ============================================================================
-opt.lazyredraw = true
-opt.ttyfast = true
 vim.cmd([[filetype plugin indent on]])

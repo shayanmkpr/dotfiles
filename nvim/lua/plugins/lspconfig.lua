@@ -3,7 +3,6 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
-		{ "folke/neodev.nvim", opts = {} },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -50,7 +49,7 @@ return {
 				-- 	})
 				-- end, opts)
 				map("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-				map("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+				map("n", "ga", "<cmd>Telescope lsp_references<CR>", opts)
 				map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 				map("n", "<leader>rn", vim.lsp.buf.rename, opts)
 				map("n", "K", vim.lsp.buf.hover, opts)
@@ -115,6 +114,7 @@ return {
 							Lua = {
 								diagnostics = { globals = { "vim" } },
 								completion = { callSnippet = "Replace" },
+								hint = { enable = false },
 							},
 						},
 					})

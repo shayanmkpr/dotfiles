@@ -19,16 +19,18 @@ return {
 			return "󰍉 " .. sc.current .. "/" .. sc.total
 		end
 
-		local function parent_and_filename()
+		local function relative_path()
 			local filepath = vim.fn.expand("%:p")
 			if filepath == "" then
 				return "[No Name]"
 			end
 
-			local parent = vim.fn.fnamemodify(filepath, ":h:t")
-			local filename = vim.fn.fnamemodify(filepath, ":t")
+			local cwd = vim.fn.getcwd()
+			if vim.startswith(filepath, cwd) then
+				return filepath:sub(#cwd + 2)
+			end
 
-			return parent .. "/" .. filename
+			return filepath
 		end
 
 		local function penguin()
@@ -42,7 +44,7 @@ return {
 				section_separators = { left = "", right = "" },
 			},
 			sections = {
-				lualine_a = { parent_and_filename },
+				lualine_a = { relative_path },
 				lualine_b = { "branch", "diff" },
 				lualine_c = { "diagnostics" },
 				lualine_y = { recording_status, search_count },

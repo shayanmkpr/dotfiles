@@ -7,10 +7,11 @@ return {
 		init = function()
 			vim.g.codeium_disable_bindings = 1
 		end,
-		-- config = function()
-		-- 	vim.keymap.set("i", "<F6>", function()
-		-- 		return vim.fn["codeium#Accept"]()
-		-- 	end, { expr = true, silent = true })
-		-- end,
+		config = function()
+			-- use tab to Accept
+			vim.keymap.set("i", "<tab>", function()
+				return vim.fn["codeium#Accept"]()
+			end, { expr = true, silent = true })
+		end,
 	},
 }

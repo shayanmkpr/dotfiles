@@ -2,14 +2,9 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	dependencies = {
-		{
-			"windwp/nvim-ts-autotag",
-			opts = {},
-		},
-	},
 	opts = {
-		highlight = { enable = true },
+		highlight = { enable = true, disable = { "markdown" } },
+		-- highlight = { enable = true },
 		indent = { enable = true },
 		ensure_installed = {
 			"python",
@@ -28,6 +23,7 @@ return {
 			"gitignore",
 			"query",
 			"c",
+			-- "markdown",
 		},
 		incremental_selection = {
 			enable = true,

@@ -9,6 +9,7 @@ return {
 		require("nvim-tree").setup({
 			view = { width = 50 },
 			renderer = { icons = { show = { file = true, folder = true } } },
+			update_focused_file = { enable = true },
 			actions = { open_file = { quit_on_open = true } },
 			filters = { dotfiles = false },
 		})
