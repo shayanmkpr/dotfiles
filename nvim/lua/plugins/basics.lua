@@ -9,7 +9,7 @@ return {
 		end,
 		config = function()
 			-- use tab to Accept
-			vim.keymap.set("i", "<tab>", function()
+			vim.keymap.set("i", "<leader><tab>", function()
 				return vim.fn["codeium#Accept"]()
 			end, { expr = true, silent = true })
 		end,

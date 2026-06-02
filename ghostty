@@ -1,5 +1,17 @@
 macos-titlebar-style = hidden
 
 background = #000000
-background-opacity = 0.8
+background-opacity = 0.85
 background-blur = true
+
+font-family = "FantasqueSansM Nerd Font M"ono"
+# font-family-bold
+# font-family-italic
+# font-family-bold-italic
+
+# Make Option key work as Meta (Alt) for tmux
+macos-option-as-alt = true
+
+# Prevent Ghostty from consuming Option+Left/Right (important!)
+keybind = alt+left=unbind
+keybind = alt+right=unbind

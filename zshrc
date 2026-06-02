@@ -23,6 +23,7 @@ command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directorie
 alias godebug='dlv debug --headless --listen=:2345 --api-version=2 --log'
 alias sdlocal="ssh adminsh@192.168.16.51"
 alias sdlocalsrvc="ssh root@192.168.30.14"
+alias sdmirror="ssh root@65.109.199.85"
 
 autoload -Uz compinit && compinit
 setopt autopushd
@@ -77,7 +78,7 @@ open-claude() {
     export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
     export ANTHROPIC_API_KEY=""
 
-    export ANTHROPIC_DEFAULT_OPUS_MODEL="moonshotai/kimi-k2.6"
+    export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek/deepseek-v4-pro"
     export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek/deepseek-v4-flash"
     export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek/deepseek-v4-flash"
     export CLAUDE_CODE_SUBAGENT_MODEL="deepseek/deepseek-v4-flash"

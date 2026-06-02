@@ -4,7 +4,20 @@
 	"lsp":false,
 
 	"permission": {
-	"bash": "ask",
-	"edit": "ask"
+		"edit": "ask",
+		"bash": {
+			"*": "ask",
+			"git status": "allow",
+			"git diff *": "allow",
+			"git log *": "allow",
+			"rm *": "ask",
+			"grep *": "allow",
+			"ls *": "allow",
+			"pwd": "allow",
+			"cat *": "allow",
+			"grep *": "allow",
+			"find *": "allow",
+
+		},
 	}
 }
