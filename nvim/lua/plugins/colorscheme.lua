@@ -17,13 +17,8 @@
 -- 				tag_attribute = { italic = true },
 -- 			},
 -- 			filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
--- 			day_night = {
--- 				enable = false,
--- 				day_filter = "ristretto",
--- 				night_filter = "octagon",
--- 			},
 -- 		})
--- 		vim.cmd.colorscheme("monokai-pro-machine")
+-- 		vim.cmd.colorscheme("monokai-pro-octagon")
 -- 	end,
 -- }
 

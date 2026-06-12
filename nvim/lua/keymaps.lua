@@ -26,3 +26,11 @@ keymap("n", "<leader>s", ":bprevious<CR>")
 
 -- Thank the prime not me.
 keymap("n", "<leader>re", "oif err != nil {<CR>}<ESC>O")
+
+-- hugging faces llm nvim
+-- keymap("i", "<C-Space>", require("llm").suggest, { desc = "Trigger AI complete" })
+
+-- codium
+keymap("i", "<leader><tab>", function()
+	return vim.fn["codeium#Accept"]()
+end, { expr = true, silent = true })
