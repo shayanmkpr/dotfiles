@@ -4,21 +4,21 @@
 -- 	priority = 1000,
 -- 	config = function()
 -- 		require("monokai-pro").setup({
--- 			transparent_background = false,
+-- 			transparent_background = true,
 -- 			devicons = true,
 -- 			styles = {
 -- 				comment = { italic = true },
 -- 				keyword = { italic = true },
 -- 				type = { italic = true },
--- 				storageclass = { italic = true },
+-- 				storageclass = { italic = false },
 -- 				structure = { italic = true },
 -- 				parameter = { italic = true },
 -- 				annotation = { italic = true },
 -- 				tag_attribute = { italic = true },
 -- 			},
--- 			filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
+-- 			filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
 -- 		})
--- 		vim.cmd.colorscheme("monokai-pro-octagon")
+-- 		vim.cmd.colorscheme("monokai-pro")
 -- 	end,
 -- }
 
@@ -32,98 +32,95 @@ return {
 
 		config = function()
 			require("rose-pine").setup({
-				variant = "moon", -- main | moon | dawn
-
-				dark_variant = "moon",
-
+				variant = "main", -- main | moon | dawn
+				dark_variant = "main",
 				disable_background = false,
 				disable_float_background = false,
 				disable_italics = false,
-
 				terminal_colors = true,
-
 				styles = {
 					bold = true,
 					italic = true,
 					transparency = true,
 				},
-
-				highlight_groups = {
-					-- Editor
-					CursorLine = { bg = "highlight_low" },
-					CursorLineNr = { fg = "gold", bold = true },
-
-					LineNr = { fg = "muted" },
-
-					Visual = { bg = "gold" },
-
-					Search = {
-						bg = "gold",
-						fg = "base",
-					},
-
-					IncSearch = {
-						bg = "rose",
-						fg = "base",
-					},
-
-					MatchParen = {
-						fg = "iris",
-						bold = true,
-					},
-
-					-- Floating windows
-					NormalFloat = { bg = "surface" },
-
-					FloatBorder = {
-						fg = "highlight_high",
-						bg = "surface",
-					},
-
-					-- Telescope
-					TelescopeNormal = { bg = "base" },
-
-					TelescopeBorder = {
-						fg = "overlay",
-						bg = "base",
-					},
-
-					TelescopePromptNormal = {
-						bg = "surface",
-					},
-
-					TelescopePromptBorder = {
-						fg = "iris",
-						bg = "surface",
-					},
-
-					TelescopeSelection = {
-						bg = "highlight_med",
-					},
-
-					-- Completion menu
-					Pmenu = {
-						bg = "surface",
-					},
-
-					PmenuSel = {
-						bg = "highlight_med",
-					},
-
-					-- Diagnostics
-					DiagnosticError = { fg = "love" },
-					DiagnosticWarn = { fg = "gold" },
-					DiagnosticInfo = { fg = "foam" },
-					DiagnosticHint = { fg = "iris" },
-
-					-- Git
-					GitSignsAdd = { fg = "foam" },
-					GitSignsChange = { fg = "rose" },
-					GitSignsDelete = { fg = "love" },
-				},
 			})
 
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd("colorscheme rose-pine-moon")
 		end,
 	},
 }
+
+
+-- return {
+-- 	"catppuccin/nvim",
+-- 	name = "catppuccin",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("catppuccin").setup({
+-- 			flavour = "mocha", -- latte, frappe, macchiato, mocha
+-- 			background = { light = "latte", dark = "mocha" },
+-- 			transparent_background = true,
+-- 			show_end_of_buffer = false,
+-- 			term_colors = false,
+-- 			dim_inactive = { enabled = false, shade = "dark", percentage = 0.15 },
+-- 			styles = {
+-- 				comments = { "italic"},
+-- 				conditionals = {},
+-- 				loops = {},
+-- 				functions = {"italic"},
+-- 				keywords = {},
+-- 				strings = {},
+-- 				variables = {},
+-- 				numbers = {"italic" },
+-- 				booleans = {},
+-- 				properties = {},
+-- 				types = {"italic" },
+-- 				operators = {},
+-- 			},
+-- 			default_integrations = true,
+-- 			integrations = {
+-- 				cmp = true,
+-- 				gitsigns = true,
+-- 				nvimtree = true,
+-- 				treesitter = true,
+-- 				notify = false,
+-- 				mini = { enabled = true, indentscope_color = "" },
+-- 			},
+-- 		})
+--
+-- 		vim.cmd("colorscheme catppuccin")
+-- 	end,
+-- }
+
+-- return {
+-- 	"ellisonleao/gruvbox.nvim",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("gruvbox").setup({
+-- 			transparent_mode = true,
+-- 			undercurl = true,
+-- 			underline = true,
+-- 			bold = true,
+-- 			italic = {
+-- 				strings = true,
+-- 				emphasis = true,
+-- 				comments = true,
+-- 				operators = true,
+-- 				folds = true,
+-- 			},
+-- 			strikethrough = true,
+-- 			invert_selection = false,
+-- 			invert_signs = false,
+-- 			invert_tabline = false,
+-- 			invert_intend_guides = false,
+-- 			inverse = true,
+-- 			palette_overrides = {},
+-- 			overrides = {},
+-- 			dim_inactive = false,
+-- 			component_style = "default", -- default | minimal | original
+-- 			lualine_bold = false,
+-- 		})
+--
+-- 		vim.cmd("colorscheme gruvbox")
+-- 	end,
+-- }

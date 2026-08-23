@@ -1,13 +1,13 @@
 macos-titlebar-style = hidden
 
 background = #000000
-background-opacity = 0.85
+background-opacity = 0.65
 background-blur = true
 
-font-family = "FantasqueSansM Nerd Font M"ono"
-# font-family-bold
-# font-family-italic
-# font-family-bold-italic
+# font-family = "JetBrains Mono"
+# font-family-bold = "JetBrains Mono"
+# font-family-italic = "Victor Mono"
+# font-family-bold-italic = "Victor Mono"
 
 # Make Option key work as Meta (Alt) for tmux
 macos-option-as-alt = true

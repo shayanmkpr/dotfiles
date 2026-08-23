@@ -11,6 +11,7 @@ return {
 			"matlab",
 			"go",
 			"json",
+			"java",
 			"javascript",
 			"typescript",
 			"html",

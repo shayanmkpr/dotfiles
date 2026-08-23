@@ -19,11 +19,14 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
-command -v eza &>/dev/null && alias ls="eza -l --icons=always --group-directories-first"
+command -v eza &>/dev/null && alias ls="eza -l --header --icons=always --group-directories-first"
+alias idea="open . -na 'IntelliJ IDEA.app'"
+alias goland="open . -na 'GoLand.app'"
 alias godebug='dlv debug --headless --listen=:2345 --api-version=2 --log'
 alias sdlocal="ssh adminsh@192.168.16.51"
 alias sdlocalsrvc="ssh root@192.168.30.14"
 alias sdmirror="ssh root@65.109.199.85"
+alias sdstage="ssh root@5.78.95.37"
 
 autoload -Uz compinit && compinit
 setopt autopushd
@@ -42,7 +45,7 @@ DOTFILES=$HOME/dotfiles
 [ ! -L "$HOME/Library/Application Support/com.mitchellh.ghostty/config" ] && ln -sfn $DOTFILES/ghostty "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 [ ! -L "$HOME/.tmux.conf" ] && ln -sfn $DOTFILES/tmux.conf $HOME/.tmux.conf
 [ ! -L "$HOME/.zshrc" ] && ln -sfn $DOTFILES/zshrc $HOME/.zshrc
-[ ! -L "$HOME/.config/opencode/agent" ] && ln -sfn $DOTFILES/opencode/agent "$HOME/.config/opencode/agent"
+[ ! -L "$HOME/.config/opencode" ] && ln -sfn $DOTFILES/opencode/agents "$HOME/.config/opencode"
 [ ! -L "$HOME/.config/opencode/opencode.json" ] && ln -sfn $DOTFILES/opencode/opencode.json "$HOME/.config/opencode/opencode.json"
 
 # CGO flags for LibRaw and JPEG libraries
@@ -70,24 +73,3 @@ openrouter-api() {
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# Override Claude Code to use OpenRouter API
-open-claude() {
-	source ~/.secrets
-    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
-    export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
-    export ANTHROPIC_API_KEY=""
-
-    export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek/deepseek-v4-pro"
-    export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek/deepseek-v4-flash"
-    export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek/deepseek-v4-flash"
-    export CLAUDE_CODE_SUBAGENT_MODEL="deepseek/deepseek-v4-flash"
-
-    claude ""
-}
-
-claude_reset() {
-    unset ANTHROPIC_BASE_URL ANTHROPIC_AUTH_TOKEN ANTHROPIC_API_KEY
-    unset ANTHROPIC_CUSTOM_HEADERS ANTHROPIC_MODEL ANTHROPIC_SMALL_FAST_MODEL
-    echo "Claude environment has been reset to default."
-}

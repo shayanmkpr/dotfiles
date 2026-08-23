@@ -4,9 +4,12 @@
     "bindings": {
       "space f": "file_finder::Toggle",
       "space w": "workspace::Save",
-      "space e": "workspace::ToggleLeftDock",
-      "space a": "agent::FocusAgent",
-      "space g": "tab_switcher::ToggleAll",
+      "space q": "pane::CloseActiveItem",
+      "space e": "project_panel::Toggle",
+      "space s": "pane::ActivatePreviousItem",
+      "space g": "pane::ActivateNextItem",
+      "space o": "outline_panel::Toggle",
+      "space b": "editor::ToggleBreakpoint"
     },
   },
 ]

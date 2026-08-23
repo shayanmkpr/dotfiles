@@ -24,7 +24,7 @@
       "api_url": "",
     },
     "mode": "eager",
-    "provider": "open_ai_compatible_api",
+    "provider": "zed",
     "open_ai_compatible_api": {
       "max_output_tokens": 200,
       "model": "google/gemini-3-flash-preview",
@@ -110,16 +110,16 @@
     "metrics": false,
   },
   "vim_mode": true,
-  "base_keymap": "Cursor",
+  "base_keymap": "Zed",
   "icon_theme": {
     "mode": "dark",
     "light": "Material Icon Theme",
     "dark": "Material Icon Theme",
   },
-  "ui_font_size": 14.0,
+  "ui_font_size": 15.0,
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Zedokai (Filter Spectrum)",
+    "dark": "Gruvbox Dark",
   },
 }
