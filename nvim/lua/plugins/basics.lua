@@ -1,6 +1,19 @@
 return {
 	{ "nvim-lua/plenary.nvim" },
-	{ "nvim-telescope/telescope.nvim"},
+	{
+		"nvim-telescope/telescope.nvim",
+		opts = {
+			defaults = {
+				file_ignore_patterns = {},
+			},
+			pickers = {
+				find_files = {
+					hidden = true,
+					no_ignore = true,
+				},
+			},
+		},
+	},
 	{
 		"Exafunction/codeium.vim",
 		event = "BufEnter",

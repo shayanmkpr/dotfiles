@@ -38,7 +38,7 @@
     "dock": "left",
   },
   "outline_panel": {
-    "dock": "left",
+    "dock": "right",
   },
   "tab_bar": {
     "show": true,
@@ -120,6 +120,6 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Gruvbox Dark",
+    "dark": "Zedokai (Filter Spectrum)",
   },
 }
