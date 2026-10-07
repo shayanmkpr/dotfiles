@@ -1,4 +1,4 @@
-{
+{ "workbench.colorTheme": "Noctokai",
     "editor.fontSize": 14.5,
     "editor.lineNumbers": "relative",
     "window.density.editorTabHeight": "compact",
@@ -50,11 +50,18 @@
             "before": ["<leader>", "g"],
             "commands": ["workbench.action.nextEditor"]
         },
+        {
+            "before": ["g", "a"],
+            "commands": ["workbench.action.nextEditor"]
+        },
     ],
-    "go.toolsEnvVars": {
-        "CGO_CFLAGS": "-I/opt/homebrew/opt/libraw/include -I/opt/homebrew/opt/jpeg-turbo/include",
-        "CGO_LDFLAGS": "-L/opt/homebrew/opt/libraw/lib -L/opt/homebrew/opt/jpeg-turbo/lib"
-    },
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "cursor.composer.usageSummaryDisplay": "always",
+    "workbench.activityBar.location": "bottom",
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+    "chat.titleBar.signIn.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.browser.showInTitleBar": false,
+    "claudeCode.preferredLocation": "panel",
+    "security.workspace.trust.untrustedFiles": "open",
 }

@@ -47,6 +47,7 @@ opt.undofile = true
 opt.undolevels = 1000
 opt.timeoutlen = 300
 opt.updatetime = 250
+vim.opt.mouse = ""
 
 -- ============================================================================
 -- WINDOW SPLITS
@@ -64,3 +65,10 @@ opt.spelllang = { "en_us" }
 -- PERFORMANCE
 -- ============================================================================
 vim.cmd([[filetype plugin indent on]])
+
+vim.opt.list = true
+vim.opt.listchars = {
+    tab = "▏ ",
+    lead = "▏",
+    trail = "·",
+}

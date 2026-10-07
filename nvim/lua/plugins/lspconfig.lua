@@ -20,12 +20,6 @@ return {
 			severity_sort = true,
 		})
 
-		-- Set diagnostic signs
-		local signs = { Error = "", Warn = "", Hint = "", Info = "" }
-		for type, icon in pairs(signs) do
-			vim.fn.sign_define("DiagnosticSign" .. type, { text = icon, texthl = "DiagnosticSign" .. type })
-		end
-
 		-- LSP keymaps
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -34,20 +28,6 @@ return {
 				local map = vim.keymap.set
 				map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 				map("n", "gD", vim.lsp.buf.declaration, opts)
-				-- map("n", "gi", function()
-				-- 	vim.lsp.buf.implementation({
-				-- 		on_list = function(options)
-				-- 			local max = 200
-				-- 			if #options.items > max then
-				-- 				local t = {}
-				-- 				for i = 1, max do t[i] = options.items[i] end
-				-- 				options.items = t
-				-- 			end
-				-- 			vim.fn.setqflist({}, " ", options)
-				-- 			vim.cmd("Telescope quickfix")
-				-- 		end,
-				-- 	})
-				-- end, opts)
 				map("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 				map("n", "ga", "<cmd>Telescope lsp_references<CR>", opts)
 				map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
@@ -55,10 +35,6 @@ return {
 				map("n", "K", vim.lsp.buf.hover, opts)
 				map("n", "<leader>d", vim.diagnostic.open_float, opts)
 				map("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
-				map("n", "[d", vim.diagnostic.goto_prev, opts)
-				map("n", "]d", vim.diagnostic.goto_next, opts)
-				map("n", "<leader>rs", ":LspRestart<CR>", opts)
-				map("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 				if vim.lsp.inlay_hint then
 					vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
 				end
@@ -67,7 +43,7 @@ return {
 
 		-- Auto-format and organize imports for Go files
 		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*.go",
+			pattern = "*",
 			callback = function()
 				local params = vim.lsp.util.make_range_params()
 				params.context = { only = { "source.organizeImports" } }

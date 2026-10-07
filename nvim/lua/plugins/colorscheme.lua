@@ -16,40 +16,39 @@
 -- 				annotation = { italic = true },
 -- 				tag_attribute = { italic = true },
 -- 			},
--- 			filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
+-- 			filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
 -- 		})
 -- 		vim.cmd.colorscheme("monokai-pro")
 -- 	end,
 -- }
 
 
-return {
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		lazy = false,
-		priority = 1000,
-
-		config = function()
-			require("rose-pine").setup({
-				variant = "main", -- main | moon | dawn
-				dark_variant = "main",
-				disable_background = false,
-				disable_float_background = false,
-				disable_italics = false,
-				terminal_colors = true,
-				styles = {
-					bold = true,
-					italic = true,
-					transparency = false,
-				},
-			})
-
-			vim.cmd("colorscheme rose-pine-moon")
-		end,
-	},
-}
-
+-- return {
+-- 	{
+-- 		"rose-pine/neovim",
+-- 		name = "rose-pine",
+-- 		lazy = false,
+-- 		priority = 1000,
+--
+-- 		config = function()
+-- 			require("rose-pine").setup({
+-- 				variant = "main", -- main | moon | dawn
+-- 				dark_variant = "main",
+-- 				disable_background = false,
+-- 				disable_float_background = false,
+-- 				disable_italics = false,
+-- 				terminal_colors = true,
+-- 				styles = {
+-- 					bold = true,
+-- 					italic = true,
+-- 					transparency = true,
+-- 				},
+-- 			})
+--
+-- 			vim.cmd("colorscheme rose-pine")
+-- 		end,
+-- 	},
+-- }
 
 -- return {
 -- 	"catppuccin/nvim",
@@ -92,35 +91,30 @@ return {
 -- 	end,
 -- }
 
--- return {
--- 	"ellisonleao/gruvbox.nvim",
--- 	priority = 1000,
--- 	config = function()
--- 		require("gruvbox").setup({
--- 			transparent_mode = true,
--- 			undercurl = true,
--- 			underline = true,
--- 			bold = true,
--- 			italic = {
--- 				strings = true,
--- 				emphasis = true,
--- 				comments = true,
--- 				operators = true,
--- 				folds = true,
--- 			},
--- 			strikethrough = true,
--- 			invert_selection = false,
--- 			invert_signs = false,
--- 			invert_tabline = false,
--- 			invert_intend_guides = false,
--- 			inverse = true,
--- 			palette_overrides = {},
--- 			overrides = {},
--- 			dim_inactive = false,
--- 			component_style = "default", -- default | minimal | original
--- 			lualine_bold = false,
--- 		})
---
--- 		vim.cmd("colorscheme gruvbox")
--- 	end,
--- }
+return {
+	"sainnhe/gruvbox-material",
+	priority = 1000,
+
+	config = function()
+		vim.g.gruvbox_material_background = "hard"
+		vim.g.gruvbox_material_foreground = "material" -- "material" | "mix" | "original"
+		vim.g.gruvbox_material_enable_italic = 1
+		vim.g.gruvbox_material_enable_bold = 1
+		vim.g.gruvbox_material_transparent_background = 0
+		vim.g.gruvbox_material_colors_override = {
+			bg0 = { "#171717", "234" },
+			-- 	bg2 = { "#171717", "235" },
+			-- 	bg3 = { "#171717", "235" },
+		}
+		vim.cmd("colorscheme gruvbox-material")
+		vim.cmd([[
+			highlight Keyword gui=italic
+			highlight Function gui=italic
+			highlight Type gui=italic
+			highlight Comment gui=italic
+			highlight Operator gui=italic
+			highlight Constant gui=italic
+			highlight String gui=italic
+		]])
+	end,
+}
